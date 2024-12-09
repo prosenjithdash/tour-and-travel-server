@@ -1,17 +1,15 @@
-// req and res manage
-
+import { tourService } from './tour.service'
 import { Request, Response } from 'express'
-import { userService } from './user.service'
 
-const createUser = async (req: Request, res: Response) => {
+const createTour = async (req: Request, res: Response) => {
   try {
     const payload = req.body
 
-    const result = await userService.createUser(payload)
+    const result = await tourService.createTour(payload)
 
     res.json({
       status: false,
-      message: 'User created Successfully.',
+      message: 'Tour created Successfully.',
       data: result,
     })
   } catch (error) {
@@ -24,12 +22,12 @@ const createUser = async (req: Request, res: Response) => {
   }
 }
 
-const getUser = async (req: Request, res: Response) => {
+const getTours = async (req: Request, res: Response) => {
   try {
-    const result = await userService.getUser()
+    const result = await tourService.getTours()
     res.json({
       status: true,
-      message: 'User getting Successfully.',
+      message: 'Tour getting Successfully.',
       result,
     })
   } catch (error) {
@@ -42,13 +40,13 @@ const getUser = async (req: Request, res: Response) => {
   }
 }
 
-const getSingleUser = async (req: Request, res: Response) => {
+const getSingleTour = async (req: Request, res: Response) => {
   try {
     const userId = req.params.userId
-    const result = await userService.getSingleUser(userId)
+    const result = await tourService.getSingleTour(userId)
     res.json({
       status: true,
-      message: 'User getting Successfully.',
+      message: 'Singe Tour getting Successfully.',
       result,
     })
   } catch (error) {
@@ -61,15 +59,15 @@ const getSingleUser = async (req: Request, res: Response) => {
   }
 }
 
-const updateUser = async (req: Request, res: Response) => {
+const updateTour = async (req: Request, res: Response) => {
   try {
     const userId = req.params.userId
     const body = req.body
-    const result = await userService.updateUser(userId, body)
+    const result = await tourService.updateTour(userId, body)
 
     res.json({
       status: true,
-      message: 'User updated Successfully.',
+      message: 'Tour updated Successfully.',
       result,
     })
   } catch (error) {
@@ -82,10 +80,10 @@ const updateUser = async (req: Request, res: Response) => {
   }
 }
 
-const deleteUser = async (req: Request, res: Response) => {
+const deleteTour = async (req: Request, res: Response) => {
   try {
     const userId = req.params.userId
-    const result = await userService.deleteUser(userId)
+    const result = await tourService.deleteTour(userId)
 
     res.json({
       status: false,
@@ -101,11 +99,10 @@ const deleteUser = async (req: Request, res: Response) => {
     console.log(error)
   }
 }
-
-export const userController = {
-  createUser,
-  getUser,
-  getSingleUser,
-  updateUser,
-  deleteUser,
+export const tourController = {
+  createTour,
+  getTours,
+  getSingleTour,
+  updateTour,
+  deleteTour,
 }
