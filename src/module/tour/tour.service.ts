@@ -26,10 +26,29 @@ const deleteTour = async (id: string) => {
   return result
 }
 
+// // use for instance methods
+// const getNextSchedule = async (id: string) => {
+//   const tour = await Tour.findById(id)
+//   const nextSchedule = tour?.getNextNearestStartDateAndEndDate()
+//   return {
+//     tour,
+//     nextSchedule,
+//   }
+// }
+
+// use for static
+const getNextSchedule = async (id: string) => {
+  const tour = await Tour.getNextNearestStartDateAndEndDate()
+  return {
+    tour,
+  }
+}
+
 export const tourService = {
   createTour,
   getTours,
   getSingleTour,
   updateTour,
   deleteTour,
+  getNextSchedule,
 }
