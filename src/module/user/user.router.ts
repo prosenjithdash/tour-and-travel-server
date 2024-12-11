@@ -14,5 +14,4 @@ userRouter.put('/:userId', userController.updateUser)
 // delete single user
 userRouter.delete('/:userId', userController.deleteUser)
 
- 
 export default userRouter

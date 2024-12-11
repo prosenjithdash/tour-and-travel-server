@@ -3,7 +3,7 @@ import { tourController } from './tour.controller'
 
 const tourRouter = Router()
 
-//
+// get schedule
 tourRouter.get('/schedule/:userId', tourController.getNextSchedule)
 // get single tour
 tourRouter.get('/:userId', tourController.getSingleTour)
@@ -16,5 +16,4 @@ tourRouter.put('/:userId', tourController.updateTour)
 // delete single tour
 tourRouter.delete('/:userId', tourController.deleteTour)
 
- 
 export default tourRouter
