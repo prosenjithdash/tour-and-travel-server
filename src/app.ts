@@ -17,6 +17,8 @@ app.get('/', (req: Request, res: Response) => {
     message: 'Sever Live',
   })
 })
+
+// error handling middleware
 app.use((error: any, req: Request, res: Response, _next: NextFunction) => {
   console.log(error)
   res
