@@ -78,6 +78,13 @@ const createBooking = async (payload: IBooking): Promise<IBooking> => {
   }
 }
 
+// update booking
+/**
+ * Booking update
+ * Booking cancel  - Booking Model
+ * Tour AvailablesSeats =   availablesSeatsf + Bookedslot  - Tour Model
+ */
+
 export const BookingService = {
   createBooking,
 }
