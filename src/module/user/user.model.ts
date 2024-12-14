@@ -1,5 +1,4 @@
 import { model, Schema } from 'mongoose'
-import Enum from 'enum'
 import { IUser } from './user.interface'
 
 const userSchema = new Schema<IUser>({

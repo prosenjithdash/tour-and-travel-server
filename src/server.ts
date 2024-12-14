@@ -8,6 +8,7 @@ async function server() {
     // tour-and-travel123123
 
     await mongoose.connect(config.database_url as string)
+    // console.log(`mongo sever: ${config.database_url}`)
 
     app.listen(config.port, () => {
       console.log(`Server is running on ${config.port}.`)

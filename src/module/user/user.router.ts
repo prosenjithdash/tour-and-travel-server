@@ -3,6 +3,10 @@ import { userController } from './user.controller'
 
 const userRouter = Router()
 
+//........
+//User do not creating
+//........
+
 // create user
 userRouter.post('/create-user', userController.createUser)
 // get all user

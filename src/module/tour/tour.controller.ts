@@ -8,7 +8,7 @@ const createTour = async (req: Request, res: Response) => {
     const result = await tourService.createTour(payload)
 
     res.json({
-      status: false,
+      status: true,
       message: 'Tour created Successfully.',
       data: result,
     })
