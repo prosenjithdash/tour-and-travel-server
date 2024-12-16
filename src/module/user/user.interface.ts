@@ -1,8 +1,17 @@
+// export interface IUser {
+//   name?: string
+//   age: number
+//   email: string
+//   photo?: string | null
+//   role: 'user' | 'admin'
+//   userStatus: 'active' | 'block'
+// }
+
 export interface IUser {
-  name?: string
+  name: string
   age: number
   email: string
   photo?: string | null
   role: 'user' | 'admin'
-  userStatus: 'active' | 'block'
+  userStatus: 'active' | 'inactive'
 }
