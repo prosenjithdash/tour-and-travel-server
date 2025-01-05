@@ -1,8 +1,3 @@
-// import { StatusCodes } from 'http-status-codes'
-// import { catchAsync } from '../../utils/catchAsync'
-// import { sendResponse } from '../../utils/sendResponse'
-// import { BookingService } from './booking.service'
-
 import { StatusCodes } from 'http-status-codes'
 import { sendResponse } from '../../utils/sendResponse'
 import { BookingService } from './booking.service'

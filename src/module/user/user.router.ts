@@ -1,5 +1,3 @@
-
-
 import { NextFunction, Request, Response, Router } from 'express'
 import { userController } from './user.controller'
 import { UserValidation } from './userValidation'
