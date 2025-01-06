@@ -1,18 +1,3 @@
-// // hook -> pre hook
-// // userSchema.pre("find", function (this, next) {
-// //   this.find({ userStatus: { $ne: 'active' } })
-// //   next()
-// // })
-
-// // hook -> post hook
-// // userSchema.post('find', function (docs, next) {
-// //   docs.forEach((doc: IUser) => {
-// //     doc.name = doc.name.toUpperCase()
-// //   })
-// //   next()
-// // })
-
-// // creating model
 // export const User = model<IUser>('User', userSchema)
 
 import { model, Schema } from 'mongoose'
