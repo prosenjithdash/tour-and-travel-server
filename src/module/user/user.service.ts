@@ -1,6 +1,3 @@
-// import { IUser } from './user.interface'
-// import { User } from './user.model'
-
 import { IUser } from './user.interface'
 import User from './user.model'
 
